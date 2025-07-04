@@ -1,36 +1,60 @@
-import { CalendarHeart, Users } from "lucide-react";    
+import { CalendarHeart, Users } from "lucide-react";
 
-function Projects() {
- const experienceList = [
-  {
-    company: "Company Name 1",
-    role: "Frontend Developer Intern",
-    timeLine: "June 2024 – August 2024",
-    description: "Worked on a real-world dashboard used by internal staff to monitor performance.",
-    project: {
-      title: "Internal Dashboard",
-      tech: ["React", "TypeScript", "Tailwind CSS", "REST API"],
-      live: null, 
-    },
-          
-      timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
-      collabIcon: <Users className="w-4 h-4 text-blue-900" />,
-  },
-  {
-    company: "Company Name 2",
-    role: "Fullstack Intern",
-    timeLine: "January 2024 – March 2024",
-    description: "Built features for a customer feedback platform including frontend forms and backend APIs.",
-    project: {
-      name: "Customer Feedback Portal",
-      tech: ["React", "Node.js", "Express", "MongoDB", "REST API"],
+function Projects () {
+  const projectList = [
+    {
+      title: "Portfolio",
+      image: "src/images/portfolio.png",
+      description: "A personal portfolio website showcasing my skills and projects.",
+      tech: ["React", "TypeScript", "TailwindCSS"],
+      timeline: "Ongoing",
+      collab: "Solo project",
       live: null,
-    },
-          
+      code: "https://github.com/ranaaaa1234/ranasportfolionew",
+
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
       collabIcon: <Users className="w-4 h-4 text-blue-900" />,
-  },
-];
+    },
+    {
+      title: "Weather Web-App",
+      image: "/src/assets/weatherAppImg.jpeg",
+      description: "Search any city’s weather. Displays temperature, weather condition, and time.",
+      tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
+      timeline: "1 week",
+      collab: "Solo project",
+      live: "https://ranasweather.netlify.app/",
+      code: "https://github.com/ranaaaa1234/weather-app",
+
+      timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
+      collabIcon: <Users className="w-4 h-4 text-blue-900" />,    },
+    {
+      title: "Chatify",
+      image: "/src/assets/chatifyImg.jpeg",
+      description: "A chat platform with user registration and login functionality.",
+      tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
+      timeline: "2 months",
+      collab: "Solo project",
+      live: "https://chatifyrs4.netlify.app/",
+      code: "https://github.com/ranaaaa1234/Chatt-App",
+      
+      timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
+      collabIcon: <Users className="w-4 h-4 text-blue-900" />,
+    },
+    {
+      title: "Food Explorer",
+      image: "/src/assets/foodImg.jpeg",
+      description:
+        "A recipe search app where users can find meal ideas with images.",
+      tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
+      timeline: "1 month",
+      collab: "Solo project",
+      live: null,
+      code: "https://github.com/ranaaaa1234/food-app",
+      
+      timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
+      collabIcon: <Users className="w-4 h-4 text-blue-900" />,
+    },
+  ];
 
   return (
     <section
@@ -43,21 +67,28 @@ function Projects() {
       </p>
 
       <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-2 max-w-7xl w-full">
-        {experienceList.map((project) => (
+        {projectList.map((project) => (
           <div
-            key={`${project.company}-${project.role}`}
+            key={project.title}
             className=" border border-blue-100 rounded-lg shadow-md overflow-hidden flex flex-col justify-between transition-transform hover:scale-[1.02] duration-300"
           >
+            {project.image && (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+            )}
             <div className="p-6 flex flex-col justify-between flex-grow">
               <div>
                 <h3 className="text-xl font-semibold text-blue-900 mb-2">
-                  {project.project.title || project.project.name}
+                  {project.title}
                 </h3>
                 <p className="text-blue-900 font-light mb-4">
                   {project.description}
                 </p>
                 <ul className="flex flex-wrap gap-2 text-xs text-blue-900 mb-4">
-                  {project.project.tech.map((tech) => (
+                  {project.tech.map((tech) => (
                     <li
                       key={tech}
                       className="bg-blue-50 px-2 py-1 rounded-md border-blue-100 border hover:opacity-70"
@@ -72,17 +103,17 @@ function Projects() {
                 <div className="items-start text-sm">
                   <p className="text-blue-900 font-light flex gap-1">
                     {project.timelineIcon}
-                    {project.timeLine}
+                    {project.timeline}
                   </p>
                   <p className="text-blue-900 font-light flex gap-1">
                     {project.collabIcon}
-                    {project.role}
+                    {project.collab}
                   </p>
                 </div>
 
                 <div className="flex gap-2">
                   <a
-                    ref={project.project.live}
+                    href={project.code}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border border-blue-100 text-blue-900 px-4 py-2 rounded-lg hover:opacity-70 text-sm"
@@ -90,6 +121,20 @@ function Projects() {
                     Code
                   </a>
 
+                  {project.live ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
+                    >
+                      Live demo
+                    </a>
+                  ) : (
+                    <span className="bg-gray-300 text-gray-500 px-4 py-2 rounded-lg text-sm">
+                      No Live Demo
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
