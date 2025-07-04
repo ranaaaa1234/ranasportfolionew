@@ -3,11 +3,11 @@ import {
   Microscope,
   Component,
   FileCode,
-  MonitorSmartphone,
   Palette,
   Accessibility,
   Search,
   Figma,
+  Network
 } from "lucide-react";
 
 function Skills() {
@@ -29,8 +29,8 @@ function Skills() {
       icon: <Palette className="w-5 h-5 text-blue-700" />,
     },
     {
-      name: "Responsive Design",
-      icon: <MonitorSmartphone className="w-5 h-5 text-blue-700" />,
+      name: "REST-API",
+      icon: <Network className="w-5 h-5 text-blue-700" />,
     },
   ];
 
@@ -81,7 +81,7 @@ function Skills() {
             {frontendSkills.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm"
+                className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm hover:opacity-70"
               >
                 {item.icon}
                 <span className="text-blue-900 font-light text-lg">
@@ -93,7 +93,7 @@ function Skills() {
         </div>
 
         {/* UX & UI */}
-        <div className="bg-white p-8 rounded-lg shadow-md w-[320px]  text-left border border-blue-200 flex flex-col justify-start">
+        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-200 flex flex-col justify-start">
           <h3 className="text-xl font-semibold text-blue-800 mb-4">
             UX & UI Design
           </h3>
@@ -101,7 +101,7 @@ function Skills() {
             {uxSkills.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm"
+                className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm hover:opacity-70"
               >
                 {item.icon}
                 <span className="text-blue-900 font-light text-lg">
