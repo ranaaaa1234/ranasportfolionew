@@ -22,10 +22,10 @@ const Header = () => {
 
   return (
     <nav
-      className={` animate-fade-in fixed top-0 pt-10 w-full z-50 transition-all duration-300 bg-50 ${
+      className={` animate-fade-in mt-10 fixed w-full z-50 transition-all duration-300 bg-50 ${
         scrolled
-          ? "bg-blue-50 shadow-md border-b top-0 pt-0"
-          : "bg-transparent"
+          ? "bg-blue-50 shadow-md border-b mt-0"
+          : "pt-0"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-7">
