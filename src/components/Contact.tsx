@@ -38,19 +38,19 @@ function Contact() {
       id="contact"
       className="flex flex-col items-center justify-center bg-blue-50 px-4 py-16"
     >
-      <div className="flex flex-col items-center text-center mb-10">
-        <h2 className="text-4xl font-light text-blue-900 mb-5">
+      <div className="flex flex-col items-center text-center md:mb-10">
+        <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-5">
           Let's connect
         </h2>
-        <p className="text-blue-700 text-lg max-w-2xl">
+        <p className="text-blue-700 xs:text-md sm:text-lg max-w-2xl">
           Open to new ideas, projects, and collaborations.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-10 mb-10 w-full max-w-6xl">
-        <section className="flex flex-col items-center gap-6 py-10 px-4">
-          <div className="w-full max-w-md space-y-4">
-            <p className="text-blue-700 text-lg mb-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 lg:gap-0 gap-10 xs:justify-center lg:items-start lg:mt-10 lg:mb-10 w-full max-w-6xl">
+        <section className="flex flex-col items-center gap-6 py-10 px-4 lg:px-2">
+          <div className="w-full lg:max-w-sm max-w-md space-y-4">
+            <p className="text-blue-700 xs:text-md sm:text-lg xs:text-center lg:max-w-sm lg:text-left mb-10">
               Here is how you can reach me. Whether you have a question, job
               opportunity or just want to say hello, feel free to contact me.
             </p>
@@ -85,17 +85,19 @@ function Contact() {
           </div>
         </section>
 
-        <section className="w-full max-w-xl bg-white p-8 rounded-lg shadow-md border border-blue-100">
-          <h4 className="text-blue-900 text-xl font-semibold">
+<div className="flex justify-center items-center px-4">
+
+        <section className="w-full max-w-xl justify-center bg-white p-8 rounded-lg shadow-md border border-blue-100">
+          <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
             Send me a message:
           </h4>
-          <p className="mb-10 text-blue-400">
+          <p className="xs:mb-5 sm:mb-10 text-blue-400 xs:text-md sm:text-lg">
             Leave me a message and I’ll get back to you as soon as I can!
           </p>
           {message && <p className="mb-4 text-sm text-green-600">{message}</p>}
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
-            <div className="flex flex-row gap-2 mb-2">
+            <div className="flex xs:flex-col xl:flex-row gap-2 mb-2">
               <div className="flex flex-col w-full mb-4">
                 <h4 className="mb-2 font-semibold">Email:</h4>
                 <input
@@ -107,7 +109,7 @@ function Contact() {
                 />
               </div>
 
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full mb-4">
                 <h4 className="mb-2 font-semibold">Subject:</h4>
                 <input
                   type="Subject"
@@ -134,6 +136,7 @@ function Contact() {
             />
           </form>
         </section>
+        </div>
       </div>
     </section>
   );
