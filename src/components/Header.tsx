@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import HamburgerMenu from "./hamburgerMenu";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,8 +22,10 @@ const Header = () => {
   ];
 
   return (
+  <header> 
+    <HamburgerMenu />
     <nav
-      className={` animate-fade-in mt-10 fixed w-full z-50 transition-all duration-300 bg-50 ${
+      className={`hidden lg:block animate-fade-in mt-10 fixed w-full z-50 transition-all duration-300 bg-50 ${
         scrolled
           ? "bg-blue-50 shadow-md border-b mt-0"
           : "pt-0"
@@ -45,6 +48,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    </header>
   );
 };
 

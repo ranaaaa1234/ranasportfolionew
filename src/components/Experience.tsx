@@ -9,7 +9,13 @@ function Experience() {
       timeLine: "February 2025 – May 2025",
       description:
         "During my internship at Arbetsförmedlingen, I worked on a multi-step form together with the frontend team. We collaborated closely with the UX-design team and followed an agile way of working. Accessibility was a big focus, we followed WCAG guidelines and had a visually impaired user help us test and improve the experience.",
-      list: ["Fixed bugs", "Implemented validation", "Improved accessibility", "RegEx to validate input", "Learned Angular"],
+      list: [
+        "Fixed bugs",
+        "Implemented validation",
+        "Improved accessibility",
+        "RegEx to validate input",
+        "Learned Angular",
+      ],
       project: {
         title: "Anställda med stöd",
         tech: ["Angular", "TypeScript", "CSS", "WCAG", "Figma", "Git"],
@@ -26,7 +32,13 @@ function Experience() {
       timeLine: " November 2024 – February 2025",
       description:
         "At Mappi.ai, I worked as an UX-designer, in a team, creating prototypes and improving the overall user experience based on user research. I also worked as a frontend developer, my team and I took those designs and brought them to life by implementing them on the website to make it both more functional and visually appealing.",
-      list: ["Fixed bugs", "Implemented carousel to showcase features and tasks", "Learned TypeScript", "Built and styled modal components for displaying dynamic content", "Created wireframes and prototypes in Figma for improvement suggestions and new features"],
+      list: [
+        "Fixed bugs",
+        "Implemented carousel to showcase features and tasks",
+        "Learned TypeScript",
+        "Built and styled modal components for displaying dynamic content",
+        "Created wireframes and prototypes in Figma for improvement suggestions and new features",
+      ],
       project: {
         title: "Customer Feedback Portal",
         tech: [
@@ -52,7 +64,9 @@ function Experience() {
       id="experience"
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
-      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">Experience</h2>
+      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">
+        Experience
+      </h2>
       <p className="xs:text-md sm:text-lg text-blue-800 mb-10 text-center max-w-xl">
         These are real projects I’ve built and contributed to.
       </p>

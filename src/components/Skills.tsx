@@ -7,7 +7,7 @@ import {
   Accessibility,
   Search,
   Figma,
-  Network
+  Network,
 } from "lucide-react";
 
 function Skills() {
@@ -67,10 +67,9 @@ function Skills() {
       </h2>
       <p className="text-blue-700 xs:text-md sm:text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">
         A selection of the tools and techniques I use in frontend development
-        and UX/UI design. I'm always eager to grow, learn, and expand my skillset.
-
+        and UX/UI design. I'm always eager to grow, learn, and expand my
+        skillset.
       </p>
-
 
       <div className="flex flex-col md:flex-row xs:gap-10 md:gap-20 justify-center items-center">
         {/* Frontend */}

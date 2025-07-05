@@ -1,11 +1,12 @@
 import { CalendarHeart, Users } from "lucide-react";
 
-function Projects () {
+function Projects() {
   const projectList = [
     {
       title: "Portfolio",
       image: "src/images/portfolio.png",
-      description: "A personal portfolio website showcasing my skills and projects.",
+      description:
+        "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS"],
       timeline: "Ongoing",
       collab: "Solo project",
@@ -18,7 +19,8 @@ function Projects () {
     {
       title: "Weather Web-App",
       image: "/src/assets/weatherAppImg.jpeg",
-      description: "Search any cities weather. Displays temperature, weather condition, and time.",
+      description:
+        "Search any cities weather. Displays temperature, weather condition, and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
       timeline: "1 week",
       collab: "Solo project",
@@ -26,17 +28,19 @@ function Projects () {
       code: "https://github.com/ranaaaa1234/weather-app",
 
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
-      collabIcon: <Users className="w-4 h-4 text-blue-900" />,    },
+      collabIcon: <Users className="w-4 h-4 text-blue-900" />,
+    },
     {
       title: "Chatify",
       image: "/src/assets/chatifyImg.jpeg",
-      description: "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
+      description:
+        "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
       tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
       timeline: "2 months",
       collab: "Solo project",
       live: "https://chatifyrs4.netlify.app/",
       code: "https://github.com/ranaaaa1234/Chatt-App",
-      
+
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
       collabIcon: <Users className="w-4 h-4 text-blue-900" />,
     },
@@ -50,7 +54,7 @@ function Projects () {
       collab: "Solo project",
       live: null,
       code: "https://github.com/ranaaaa1234/food-app",
-      
+
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
       collabIcon: <Users className="w-4 h-4 text-blue-900" />,
     },
@@ -61,7 +65,9 @@ function Projects () {
       id="projects"
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
-      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">My Projects</h2>
+      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">
+        My Projects
+      </h2>
       <p className="xs:text-md sm:text-lg text-blue-800 mb-10 text-center max-w-xl">
         Here are some of my own projects I've worked on.
       </p>
@@ -132,7 +138,7 @@ function Projects () {
                     </a>
                   ) : (
                     <span className="bg-gray-300 text-gray-500 px-4 py-2 rounded-lg text-sm">
-                     Demo unavailable
+                      Demo unavailable
                     </span>
                   )}
                 </div>

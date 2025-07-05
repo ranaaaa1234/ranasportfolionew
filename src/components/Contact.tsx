@@ -85,57 +85,62 @@ function Contact() {
           </div>
         </section>
 
-<div className="flex justify-center items-center px-4">
+        <div className="flex justify-center items-center px-4">
+          <section className="w-full max-w-xl justify-center bg-white p-8 rounded-lg shadow-md border border-blue-100">
+            <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
+              Send me a message:
+            </h4>
+            <p className="xs:mb-5 sm:mb-10 text-blue-400 xs:text-md sm:text-lg">
+              Leave me a message and I’ll get back to you as soon as I can!
+            </p>
+            {message && (
+              <p className="mb-4 text-sm text-green-600">{message}</p>
+            )}
 
-        <section className="w-full max-w-xl justify-center bg-white p-8 rounded-lg shadow-md border border-blue-100">
-          <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
-            Send me a message:
-          </h4>
-          <p className="xs:mb-5 sm:mb-10 text-blue-400 xs:text-md sm:text-lg">
-            Leave me a message and I’ll get back to you as soon as I can!
-          </p>
-          {message && <p className="mb-4 text-sm text-green-600">{message}</p>}
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-2"
+            >
+              <div className="flex xs:flex-col xl:flex-row gap-2 mb-2">
+                <div className="flex flex-col w-full mb-4">
+                  <h4 className="mb-2 font-semibold">Email:</h4>
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder="Your@email address"
+                    required
+                    className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
 
-          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
-            <div className="flex xs:flex-col xl:flex-row gap-2 mb-2">
-              <div className="flex flex-col w-full mb-4">
-                <h4 className="mb-2 font-semibold">Email:</h4>
-                <input
-                  type="email"
-                  name="user_email"
-                  placeholder="Your@email address"
-                  required
-                  className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                />
+                <div className="flex flex-col w-full mb-4">
+                  <h4 className="mb-2 font-semibold">Subject:</h4>
+                  <input
+                    type="Subject"
+                    name="user_email"
+                    placeholder="Your message subject..."
+                    required
+                    className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
               </div>
+              <h4 className="mb-0 font-semibold">Message:</h4>
+              <textarea
+                name="message"
+                rows={6}
+                placeholder="Type your message here..."
+                required
+                className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              ></textarea>
 
-              <div className="flex flex-col w-full mb-4">
-                <h4 className="mb-2 font-semibold">Subject:</h4>
-                <input
-                  type="Subject"
-                  name="user_email"
-                  placeholder="Your message subject..."
-                  required
-                  className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                />
-              </div>
-            </div>
-            <h4 className="mb-0 font-semibold">Message:</h4>
-            <textarea
-              name="message"
-              rows={6}
-              placeholder="Type your message here..."
-              required
-              className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            ></textarea>
-
-            <input
-              type="submit"
-              value="Send Message"
-              className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer"
-            />
-          </form>
-        </section>
+              <input
+                type="submit"
+                value="Send Message"
+                className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer"
+              />
+            </form>
+          </section>
         </div>
       </div>
     </section>
