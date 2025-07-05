@@ -62,18 +62,17 @@ function Skills() {
       id="skills"
       className="flex flex-col items-center justify-center bg-blue-50 py-16"
     >
-      <h2 className="text-4xl font-light text-blue-900 mb-5">
+      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-5">
         My skills in frontend and design
       </h2>
-      <p className="text-blue-700 text-lg text-center max-w-3xl">
+      <p className="text-blue-700 xs:text-md text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">
         A selection of the tools and techniques I use in frontend development
-        and UX/UI design.
-      </p>
-      <p className="text-blue-700 text-lg text-center max-w-3xl mb-20">
-        I'm always eager to grow, learn, and expand my skillset.
+        and UX/UI design. I'm always eager to grow, learn, and expand my skillset.
+
       </p>
 
-      <div className="flex flex-col md:flex-row gap-20 justify-center items-center">
+
+      <div className="flex flex-col md:flex-row xs:gap-10 md:gap-20 justify-center items-center">
         {/* Frontend */}
         <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-100 flex flex-col justify-start">
           <h3 className="text-xl font-semibold text-blue-800 mb-4">Frontend</h3>
