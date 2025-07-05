@@ -12,7 +12,7 @@ function Experience() {
       list: ["Fixed bugs", "Implemented validation", "Improved accessibility", "RegEx to validate input", "Learned Angular"],
       project: {
         title: "Anställda med stöd",
-        tech: ["Angular", "TypeScript", "CSS", "WCAG"],
+        tech: ["Angular", "TypeScript", "CSS", "WCAG", "Figma", "Git"],
         live: "https://arbetsformedlingen.se/for-arbetsgivare/anstallningsstod/anmal-ditt-intresse/intro",
       },
 
@@ -36,6 +36,8 @@ function Experience() {
           "UX-design",
           "Figma",
           "Wireframes",
+          "Docker",
+          "Git",
         ],
         live: "https://www.mappi.ai/",
       },

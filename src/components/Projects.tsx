@@ -18,7 +18,7 @@ function Projects () {
     {
       title: "Weather Web-App",
       image: "/src/assets/weatherAppImg.jpeg",
-      description: "Search any city’s weather. Displays temperature, weather condition, and time.",
+      description: "Search any cities weather. Displays temperature, weather condition, and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
       timeline: "1 week",
       collab: "Solo project",
@@ -132,7 +132,7 @@ function Projects () {
                     </a>
                   ) : (
                     <span className="bg-gray-300 text-gray-500 px-4 py-2 rounded-lg text-sm">
-                      No Live Demo
+                     Demo unavailable
                     </span>
                   )}
                 </div>
