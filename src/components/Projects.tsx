@@ -97,7 +97,7 @@ function Projects() {
                   {project.tech.map((tech) => (
                     <li
                       key={tech}
-                      className="bg-blue-50 px-2 py-1 rounded-md border-blue-100 border hover:opacity-70"
+                      className="bg-blue-50 px-2 py-1 rounded-md border-blue-100 border hover:opacity-90"
                     >
                       {tech}
                     </li>

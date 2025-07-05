@@ -90,7 +90,7 @@ function Contact() {
             <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
               Send me a message:
             </h4>
-            <p className="xs:mb-5 sm:mb-10 text-blue-400 xs:text-md sm:text-lg">
+            <p className="mb-5 text-blue-400 text-md">
               Leave me a message and I’ll get back to you as soon as I can!
             </p>
             {message && (
