@@ -9,11 +9,12 @@ const navItems = [
   { name: "Projects", href: "#projects" },
   { name: "Contact me", href: "#contact" },
 ];
-const [isOpen, setIsOpen] = useState(false);
 
 function HamburgerMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="lg:hidden">
+    <section className="block lg:hidden">
       <button
         className="text-blue-50 p-2 fixed top-4 right-4 z-50 bg-blue-900 rounded-full shadow-md transition-transform duration-300 hover:scale-110"
         aria-label="Toggle menu"
