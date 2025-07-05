@@ -30,7 +30,7 @@ function Projects () {
     {
       title: "Chatify",
       image: "/src/assets/chatifyImg.jpeg",
-      description: "A chat platform with user registration and login functionality.",
+      description: "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
       tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
       timeline: "2 months",
       collab: "Solo project",
@@ -44,7 +44,7 @@ function Projects () {
       title: "Food Explorer",
       image: "/src/assets/foodImg.jpeg",
       description:
-        "A recipe search app where users can find meal ideas with images.",
+        "A recipe search app where users can find meal ideas with images. This was one of my first projects where I learned to work with APIs.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
       timeline: "1 month",
       collab: "Solo project",
@@ -63,7 +63,7 @@ function Projects () {
     >
       <h2 className="text-4xl font-light text-blue-900 mb-4">My Projects</h2>
       <p className="text-lg text-blue-800 mb-10 text-center max-w-xl">
-        Here are some of the projects I've worked on.
+        Here are some of my own projects I've worked on.
       </p>
 
       <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-2 max-w-7xl w-full">

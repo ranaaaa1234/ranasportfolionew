@@ -1,48 +1,61 @@
-import { CalendarHeart, Users } from "lucide-react";    
+import { CalendarHeart, Users } from "lucide-react";
 
 function Experience() {
- const experienceList = [
-  {
-    company: "Company Name 1",
-    role: "Frontend Developer Intern",
-    timeLine: "June 2024 – August 2024",
-    description: "Worked on a real-world dashboard used by internal staff to monitor performance.",
-    project: {
-      title: "Internal Dashboard",
-      tech: ["React", "TypeScript", "Tailwind CSS", "REST API"],
-      live: null, 
-    },
-          
+  const experienceList = [
+    {
+      role: "Frontend developer intern",
+      company: "Arbetsförmedlingen",
+      collab: "Agile team collaboration",
+      timeLine: "February 2025 – May 2025",
+      description:
+        "During my internship at Arbetsförmedlingen, I worked on a multi-step form together with the frontend team. We collaborated closely with the UX-design team and followed an agile way of working. Accessibility was a big focus, we followed WCAG guidelines and had a visually impaired user help us test and improve the experience.",
+      list: ["Fixed bugs", "Implemented validation", "Improved accessibility", "RegEx to validate input", "Learned Angular"],
+      project: {
+        title: "Anställda med stöd",
+        tech: ["Angular", "TypeScript", "CSS", "WCAG"],
+        live: "https://arbetsformedlingen.se/for-arbetsgivare/anstallningsstod/anmal-ditt-intresse/intro",
+      },
+
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
       collabIcon: <Users className="w-4 h-4 text-blue-900" />,
-  },
-  {
-    company: "Company Name 2",
-    role: "Fullstack Intern",
-    timeLine: "January 2024 – March 2024",
-    description: "Built features for a customer feedback platform including frontend forms and backend APIs.",
-    project: {
-      name: "Customer Feedback Portal",
-      tech: ["React", "Node.js", "Express", "MongoDB", "REST API"],
-      live: null,
     },
-          
+    {
+      role: "Frontend developer intern",
+      company: "Mappi.AI",
+      collab: "Team of 3",
+      timeLine: " November 2024 – February 2025",
+      description:
+        "At Mappi.ai, I worked as an UX-designer, in a team, creating prototypes and improving the overall user experience based on user research. I also worked as a frontend developer, my team and I took those designs and brought them to life by implementing them on the website to make it both more functional and visually appealing.",
+      list: ["Fixed bugs", "Implemented carousel to showcase features and tasks", "Learned TypeScript", "Built and styled modal components for displaying dynamic content", "Created wireframes and prototypes in Figma for improvement suggestions and new features"],
+      project: {
+        title: "Customer Feedback Portal",
+        tech: [
+          "React",
+          "TypeScript",
+          "Chakra UI",
+          "UX-design",
+          "Figma",
+          "Wireframes",
+        ],
+        live: "https://www.mappi.ai/",
+      },
+
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
       collabIcon: <Users className="w-4 h-4 text-blue-900" />,
-  },
-];
+    },
+  ];
 
   return (
     <section
-      id="projects"
+      id="experience"
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
-      <h2 className="text-4xl font-light text-blue-900 mb-4">My Projects</h2>
+      <h2 className="text-4xl font-light text-blue-900 mb-4">Experience</h2>
       <p className="text-lg text-blue-800 mb-10 text-center max-w-xl">
-        Here are some of the projects I've worked on.
+        These are real projects I’ve built and contributed to.
       </p>
 
-      <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-2 max-w-7xl w-full">
+      <div className="grid gap-10 md:grid-cols-1 xl:grid-cols-1 max-w-5xl w-full">
         {experienceList.map((project) => (
           <div
             key={`${project.company}-${project.role}`}
@@ -50,17 +63,28 @@ function Experience() {
           >
             <div className="p-6 flex flex-col justify-between flex-grow">
               <div>
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">
-                  {project.project.title || project.project.name}
+                <h3 className="text-xl font-semibold text-blue-900 mb-0">
+                  {project.role}
                 </h3>
+                <p className="text-lg font-semibold text-blue-500 mb-2">
+                  {project.company}
+                </p>
                 <p className="text-blue-900 font-light mb-4">
                   {project.description}
                 </p>
+                {project.list && (
+                  <ul className="list-disc pl-5 text-sm text-blue-900 mb-4">
+                    {project.list.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+
                 <ul className="flex flex-wrap gap-2 text-xs text-blue-900 mb-4">
                   {project.project.tech.map((tech) => (
                     <li
                       key={tech}
-                      className="bg-blue-50 px-2 py-1 rounded-md border-blue-100 border hover:opacity-70"
+                      className="bg-blue-50 px-2 py-1 rounded-md border-blue-100 border hover:opacity-90"
                     >
                       {tech}
                     </li>
@@ -76,20 +100,19 @@ function Experience() {
                   </p>
                   <p className="text-blue-900 font-light flex gap-1">
                     {project.collabIcon}
-                    {project.role}
+                    {project.collab}
                   </p>
                 </div>
 
                 <div className="flex gap-2">
                   <a
-                    ref={project.project.live}
+                    href={project.project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-blue-100 text-blue-900 px-4 py-2 rounded-lg hover:opacity-70 text-sm"
+                    className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
                   >
-                    Code
+                    Live demo
                   </a>
-
                 </div>
               </div>
             </div>
