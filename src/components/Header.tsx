@@ -25,10 +25,10 @@ const Header = () => {
   <header> 
     <HamburgerMenu />
     <nav
-      className={`hidden lg:block animate-fade-in mt-10 fixed w-full z-50 transition-all duration-300 bg-50 ${
+      className={`hidden lg:block animate-fade-in fixed w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-blue-50 shadow-md border-b mt-0"
-          : "pt-0"
+          : "bg-transparent mt-10"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-7">
