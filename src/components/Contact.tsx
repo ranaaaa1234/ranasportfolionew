@@ -43,98 +43,96 @@ function Contact() {
           Let's connect
         </h2>
         <p className="text-blue-700 text-lg max-w-2xl">
-          I'm always open to discussing new projects, creative ideas or
-          opportunities to be part of your vision.
+          Open to new ideas, projects, and collaborations.
         </p>
       </div>
 
-<div className="flex flex-row gap-20 items-center mb-10"> 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-10 mb-10 w-full max-w-6xl">
+        <section className="flex flex-col items-center gap-6 py-10 px-4">
+          <div className="w-full max-w-md space-y-4">
+            <p className="text-blue-700 text-lg mb-10 ">
+              Here is how you can reach me. Whether you have a question, job
+              opportunity or just want to say hello, feel free to contact me.
+            </p>
 
-<section className="flex flex-col items-center gap-6 py-10 px-4">
-  <div className="w-full max-w-md space-y-4">
-    <a
-      href={`mailto:${email}`}
-      className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
-    >
-      <Mail className="w-5 h-5" />
-      {email}
-    </a>
+            <a
+              href={`mailto:${email}`}
+              className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
+            >
+              <Mail className="w-5 h-5" />
+              {email}
+            </a>
 
-    <a
-      href="https://github.com/ranaaaa1234"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
-    >
-      <Github className="w-5 h-5" />
-      GitHub
-    </a>
+            <a
+              href="https://github.com/ranaaaa1234"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
+            >
+              <Github className="w-5 h-5" />
+              GitHub
+            </a>
 
-    <a
-      href="https://www.linkedin.com/in/ranna-safi/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
-    >
-      <Linkedin className="w-5 h-5" />
-      LinkedIn
-    </a>
-  </div>
-</section>
-
-      <section className="w-full max-w-xl bg-white p-8 rounded-lg shadow-md border border-blue-100">
-        <h4 className="text-blue-900 text-xl font-semibold">
-          Send me a message:
-        </h4>
-        <p className="mb-10 text-blue-400">
-          Leave me a message and I’ll get back to you as soon as I can!
-        </p>
-        {message && <p className="mb-4 text-sm text-green-600">{message}</p>}
-
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
-        <div className="flex flex-row gap-2 mb-2"> 
-
-
-            <div className="flex flex-col w-full mb-4"> 
-         <h4 className="mb-2 font-semibold">Email:</h4>
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your@email address"
-            required
-            className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-          />
+            <a
+              href="https://www.linkedin.com/in/ranna-safi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 border border-blue-400 text-blue-900 rounded-lg p-4 shadow-sm hover:bg-gradient-to-br from-blue-50 via-purple-100 to-blue-200"
+            >
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
+            </a>
           </div>
+        </section>
 
-          <div className="flex flex-col w-full"> 
-          <h4 className="mb-2 font-semibold">Subject:</h4>
-          <input
-            type="Subject"
-            name="user_email"
-            placeholder="Your message subject..."
-            required
-            className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-          /> 
+        <section className="w-full max-w-xl bg-white p-8 rounded-lg shadow-md border border-blue-100">
+          <h4 className="text-blue-900 text-xl font-semibold">
+            Send me a message:
+          </h4>
+          <p className="mb-10 text-blue-400">
+            Leave me a message and I’ll get back to you as soon as I can!
+          </p>
+          {message && <p className="mb-4 text-sm text-green-600">{message}</p>}
 
-          </div>
-          
-          </div>
-          <h4 className="mb-0 font-semibold">Message:</h4>
-          <textarea
-            name="message"
-            rows={6}
-            placeholder="Type your message here..."
-            required
-            className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-          ></textarea>
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-2">
+            <div className="flex flex-row gap-2 mb-2">
+              <div className="flex flex-col w-full mb-4">
+                <h4 className="mb-2 font-semibold">Email:</h4>
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Your@email address"
+                  required
+                  className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+              </div>
 
-          <input
-            type="submit"
-            value="Send Message"
-            className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer"
-          />
-        </form>
+              <div className="flex flex-col w-full">
+                <h4 className="mb-2 font-semibold">Subject:</h4>
+                <input
+                  type="Subject"
+                  name="user_email"
+                  placeholder="Your message subject..."
+                  required
+                  className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+              </div>
+            </div>
+            <h4 className="mb-0 font-semibold">Message:</h4>
+            <textarea
+              name="message"
+              rows={6}
+              placeholder="Type your message here..."
+              required
+              className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            ></textarea>
 
+            <input
+              type="submit"
+              value="Send Message"
+              className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer"
+            />
+          </form>
         </section>
       </div>
     </section>
