@@ -61,8 +61,8 @@ function Projects () {
       id="projects"
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
-      <h2 className="text-4xl font-light text-blue-900 mb-4">My Projects</h2>
-      <p className="text-lg text-blue-800 mb-10 text-center max-w-xl">
+      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">My Projects</h2>
+      <p className="xs:text-md sm:text-lg text-blue-800 mb-10 text-center max-w-xl">
         Here are some of my own projects I've worked on.
       </p>
 

@@ -65,7 +65,7 @@ function Skills() {
       <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-5">
         My skills in frontend and design
       </h2>
-      <p className="text-blue-700 xs:text-md text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">
+      <p className="text-blue-700 xs:text-md sm:text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">
         A selection of the tools and techniques I use in frontend development
         and UX/UI design. I'm always eager to grow, learn, and expand my skillset.
 

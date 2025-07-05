@@ -52,8 +52,8 @@ function Experience() {
       id="experience"
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
-      <h2 className="text-4xl font-light text-blue-900 mb-4">Experience</h2>
-      <p className="text-lg text-blue-800 mb-10 text-center max-w-xl">
+      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">Experience</h2>
+      <p className="xs:text-md sm:text-lg text-blue-800 mb-10 text-center max-w-xl">
         These are real projects I’ve built and contributed to.
       </p>
 
@@ -71,7 +71,7 @@ function Experience() {
                 <p className="text-lg font-semibold text-blue-500 mb-2">
                   {project.company}
                 </p>
-                <p className="text-blue-900 font-light mb-4">
+                <p className="text-blue-900 font-light mb-4 ">
                   {project.description}
                 </p>
                 {project.list && (
