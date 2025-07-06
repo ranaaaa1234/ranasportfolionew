@@ -1,6 +1,5 @@
 import { CalendarHeart, Users, Github, ExternalLink, Ban } from "lucide-react";
 import Tooltip from "./Tooltip";
-import imgPortfolio from "/assets/portfolio.jpeg";
 import imgChatify from "/assets/chatifyImg.jpeg";
 import imgFood from "/assets/foodImg.jpeg";
 import imgWeather from "/assets/weatherAppImg.jpeg";
@@ -9,7 +8,7 @@ function Projects() {
   const projectList = [
     {
       title: "Portfolio",
-      image: imgPortfolio,
+      image: "/assets/portfolio.jpeg",
       description:
         "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS", "Vercel"],
