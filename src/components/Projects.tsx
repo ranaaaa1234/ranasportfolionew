@@ -1,4 +1,5 @@
-import { CalendarHeart, Users } from "lucide-react";
+import { CalendarHeart, Users, Github, ExternalLink, Ban } from "lucide-react";
+import Tooltip from "./Tooltip";
 
 function Projects() {
   const projectList = [
@@ -76,7 +77,7 @@ function Projects() {
         {projectList.map((project) => (
           <div
             key={project.title}
-            className=" border border-blue-100 rounded-lg shadow-md overflow-hidden flex flex-col justify-between transition-transform hover:scale-[1.02] duration-300"
+            className=" border border-blue-100 rounded-lg shadow-md flex flex-col justify-between transition-transform hover:scale-[1.02] duration-300"
           >
             {project.image && (
               <img
@@ -118,28 +119,37 @@ function Projects() {
                 </div>
 
                 <div className="flex gap-2">
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-blue-100 text-blue-900 px-4 py-2 rounded-lg hover:opacity-70 text-sm"
-                  >
-                    Code
-                  </a>
+                  <Tooltip text="View code on GitHub">
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-row gap-1 items-center border border-blue-100 text-blue-900 px-4 py-2 rounded-lg hover:opacity-70 text-sm"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  </Tooltip>
 
                   {project.live ? (
+                    <Tooltip text="View website"> 
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
+                      className="flex flex-row gap-1 items-center bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
                     >
+                      <ExternalLink className="w-4 h-4" />
                       Live demo
                     </a>
+                    </Tooltip>
                   ) : (
-                    <span className="bg-gray-300 text-gray-500 px-4 py-2 rounded-lg text-sm">
-                      Demo unavailable
+                    <Tooltip text="Website unavailable">
+                    <span className="flex flex-row gap-1 items-center bg-gray-300 text-gray-500 px-3 py-2 rounded-lg text-sm">
+                      <Ban className="w-5 h-5"></Ban>
                     </span>
+                     </Tooltip>
+
                   )}
                 </div>
               </div>

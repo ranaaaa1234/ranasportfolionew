@@ -1,4 +1,5 @@
 import { CalendarHeart, Users } from "lucide-react";
+import Tooltip from "./Tooltip";
 
 function Experience() {
   const experienceList = [
@@ -75,16 +76,21 @@ function Experience() {
         {experienceList.map((project) => (
           <div
             key={`${project.company}-${project.role}`}
-            className=" border border-blue-100 rounded-lg shadow-md overflow-hidden flex flex-col justify-between transition-transform hover:scale-[1.02] duration-300"
+            className=" border border-blue-100 rounded-lg shadow-md flex flex-col justify-between transition-transform hover:scale-[1.02] duration-300"
           >
             <div className="p-6 flex flex-col justify-between flex-grow">
               <div>
                 <h3 className="text-xl font-semibold text-blue-900 mb-0">
                   {project.role}
                 </h3>
-                <p className="text-lg font-semibold text-blue-500 mb-2">
+                <a
+                  href="https://www.mappi.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-semibold text-blue-500 mb-2 hover:opacity-80 hover:underline"
+                >
                   {project.company}
-                </p>
+                </a>
                 <p className="text-blue-900 font-light mb-4 ">
                   {project.description}
                 </p>
@@ -119,17 +125,18 @@ function Experience() {
                     {project.collab}
                   </p>
                 </div>
-
-                <div className="flex gap-2">
-                  <a
-                    href={project.project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
-                  >
-                    Live demo
-                  </a>
-                </div>
+                <Tooltip text="View website">
+                  <div className="flex gap-2">
+                    <a
+                      href={project.project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
+                    >
+                      Live demo
+                    </a>
+                  </div>
+                </Tooltip>
               </div>
             </div>
           </div>
