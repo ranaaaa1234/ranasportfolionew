@@ -108,7 +108,7 @@ function Contact() {
                   <h4 className="mb-2 font-semibold">Email:</h4>
                   <input
                     type="email"
-                    placeholder="your@email adress"
+                    placeholder="your@email.domain"
                     {...register("user_email", {
                       required: "Email is required",
                       pattern: {
@@ -169,23 +169,20 @@ function Contact() {
                 onChange={(e) => setMessageText(e.target.value)}
                 className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-              <div className="flex flex-row justify-between">
-                {errors.message?.message &&
-                  typeof errors.message.message === "string" && (
-                    <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
-                      <OctagonAlert className="w-4 h-4 text-red-500" />
-                      {errors.message.message}
-                    </p>
-                  )}
-                <p className=" text-sm text-blue-400">
-                  Max 1000 characters
-                </p>
-              </div>
+                            <div className="flex flex-row justify-between">
+                <p className=" text-sm text-blue-400">Max 1000 characters</p>
 
-              <div className="text-xs text-blue-400 text-right">
-                {messageText.length} / 1000
+                <div className="text-xs text-blue-400">
+                  {messageText.length} / 1000
+                </div>
               </div>
-
+              {errors.message?.message &&
+                typeof errors.message.message === "string" && (
+                  <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
+                    <OctagonAlert className="w-4 h-4 text-red-500" />
+                    {errors.message.message}
+                  </p>
+                )}
               <input
                 type="submit"
                 value="Send Message"
