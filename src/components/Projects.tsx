@@ -9,7 +9,7 @@ function Projects() {
       description:
         "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS", "Vercel"],
-      timeline: "Ongoing",
+      timeline: "1 week",
       collab: "Solo project",
       live: "https://ranasportfolio.vercel.app/",
       code: "https://github.com/ranaaaa1234/ranasportfolionew",
