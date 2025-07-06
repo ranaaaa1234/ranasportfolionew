@@ -58,7 +58,7 @@ function Home() {
         </div>
 
         <div>
-          <p className=" sm:text-lg md:text-xl lg:text-2xl text-blue-900 flex items-center justify-center">
+          <p className="xs:text-xl lg:text-2xl text-blue-900 flex items-center justify-center">
             Explore my portfolio to see my work and skills.
           </p>
         </div>
