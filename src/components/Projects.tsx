@@ -5,7 +5,7 @@ function Projects() {
   const projectList = [
     {
       title: "Portfolio",
-      image: "/assets/portfolio.jpeg",
+      image: "/images/portfolio.jpeg",
       description:
         "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS", "Vercel"],
@@ -19,7 +19,7 @@ function Projects() {
     },
     {
       title: "Weather Web-App",
-      image: "/assets/weatherAppImg.jpeg",
+      image: "/images/weatherAppImg.jpeg",
       description:
         "Search any cities weather. Displays temperature, weather condition, and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
@@ -33,7 +33,7 @@ function Projects() {
     },
     {
       title: "Chatify",
-      image: "/assets/chatifyImg.jpeg",
+      image: "/images/chatifyImg.jpeg",
       description:
         "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
       tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
@@ -47,7 +47,7 @@ function Projects() {
     },
     {
       title: "Food Explorer",
-      image: "/assets/foodImg.jpeg",
+      image: "/images/foodImg.jpeg",
       description:
         "A recipe search app where users can find meal ideas with images. This was one of my first projects where I learned to work with APIs.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
