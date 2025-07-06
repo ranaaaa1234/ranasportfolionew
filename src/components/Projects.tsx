@@ -1,9 +1,9 @@
 import { CalendarHeart, Users, Github, ExternalLink, Ban } from "lucide-react";
 import Tooltip from "./Tooltip";
-import imgPortfolio from "/public/assets/portfolio.jpeg";
-import imgChatify from "/public/assets/chatifyImg.jpeg";
-import imgFood from "/public/assets/foodImg.jpeg";
-import imgWeather from "/public/assets/weatherAppImg.jpeg";
+import imgPortfolio from "/assets/portfolio.jpeg";
+import imgChatify from "/assets/chatifyImg.jpeg";
+import imgFood from "/assets/foodImg.jpeg";
+import imgWeather from "/assets/weatherAppImg.jpeg";
 
 function Projects() {
   const projectList = [
