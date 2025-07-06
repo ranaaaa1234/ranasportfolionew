@@ -114,7 +114,7 @@ function Experience() {
                 </ul>
               </div>
 
-              <div className="flex justify-between items-center gap-4 flex-wrap mt-auto">
+              <div className="flex xs:flex-col sm:flex-row sm:justify-between xs:items-start sm:items-center gap-4 flex-wrap mt-auto">
                 <div className="items-start text-sm">
                   <p className="text-blue-900 font-light flex gap-1">
                     {project.timelineIcon}

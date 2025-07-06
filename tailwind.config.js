@@ -27,12 +27,11 @@ export default {
         },
       },
       screens: {
-      xs: '390px',   
+      xs: '390px', // My phone, Iphone 14
       sm: '640px',     
       md: '768px',     
       lg: '1024px',   
       xl: '1280px',  
-      '2xl': '1536px', 
     },
     },
   },

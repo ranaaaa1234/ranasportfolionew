@@ -62,7 +62,7 @@ function Skills() {
       id="skills"
       className="flex flex-col items-center justify-center bg-blue-50 py-16"
     >
-      <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-5">
+      <h2 className="xs:text-3xl sm:text-4xl xs:text-center font-light text-blue-900 mb-5">
         My skills in frontend and design
       </h2>
       <p className="text-blue-700 xs:text-md sm:text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">

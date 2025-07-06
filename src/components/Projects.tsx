@@ -146,7 +146,9 @@ function Projects() {
                   ) : (
                     <Tooltip text="Website unavailable">
                     <span className="flex flex-row gap-1 items-center bg-gray-300 text-gray-500 px-3 py-2 rounded-lg text-sm">
-                      <Ban className="w-5 h-5"></Ban>
+                      <Ban className="w-4 h-4"></Ban>
+                                            Unavailable
+
                     </span>
                      </Tooltip>
 
