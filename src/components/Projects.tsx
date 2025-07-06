@@ -5,7 +5,7 @@ function Projects() {
   const projectList = [
     {
       title: "Portfolio",
-      image: "src/images/portfolio.png",
+      image: "/src/assets/portfolio.jpeg",
       description:
         "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS"],
