@@ -8,10 +8,10 @@ function Projects() {
       image: "/src/assets/portfolio.jpeg",
       description:
         "A personal portfolio website showcasing my skills and projects.",
-      tech: ["React", "TypeScript", "TailwindCSS"],
+      tech: ["React", "TypeScript", "TailwindCSS", "Vercel"],
       timeline: "Ongoing",
       collab: "Solo project",
-      live: null,
+      live: "https://ranasportfolio.vercel.app/",
       code: "https://github.com/ranaaaa1234/ranasportfolionew",
 
       timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
