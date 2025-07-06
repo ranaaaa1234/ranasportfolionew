@@ -1,4 +1,4 @@
-import img from "../assets/pic.jpeg";
+import img from "/public/assets/pic.jpeg";
 
 function About() {
   return (
