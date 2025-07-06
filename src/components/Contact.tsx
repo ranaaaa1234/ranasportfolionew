@@ -150,7 +150,7 @@ function Contact() {
 
                   {errors.subject?.message &&
                     typeof errors.subject.message === "string" && (
-                      <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
+                      <p className="text-red-500 text-sm mt-1 items-center flex flex-row gap-1">
                         <OctagonAlert className="w-4 h-4 text-red-500" />
 
                         {errors.subject.message}
@@ -187,7 +187,7 @@ function Contact() {
               </div>
               {errors.message?.message &&
                 typeof errors.message.message === "string" && (
-                  <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
+                  <p className="text-red-500 text-sm mt-1 items-center flex flex-row gap-1">
                     <OctagonAlert className="w-4 h-4 text-red-500" />
                     {errors.message.message}
                   </p>
