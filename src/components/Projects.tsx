@@ -5,8 +5,6 @@ import imgChatify from "../assets/chatifyImg.jpeg";
 import imgFood from "../assets/foodImg.jpeg";
 import imgWeather from "../assets/weatherAppImg.jpeg";
 
-
-
 function Projects() {
   const projectList = [
     {
@@ -87,7 +85,7 @@ function Projects() {
           >
             {project.image && (
               <img
-                src={project.image}
+                src={imgPortfolio}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
