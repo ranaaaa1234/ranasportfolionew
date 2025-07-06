@@ -1,8 +1,5 @@
 import { CalendarHeart, Users, Github, ExternalLink, Ban } from "lucide-react";
 import Tooltip from "./Tooltip";
-import imgChatify from "/assets/chatifyImg.jpeg";
-import imgFood from "/assets/foodImg.jpeg";
-import imgWeather from "/assets/weatherAppImg.jpeg";
 
 function Projects() {
   const projectList = [
@@ -22,7 +19,7 @@ function Projects() {
     },
     {
       title: "Weather Web-App",
-      image: imgChatify,
+      image: "/assets/weatherAppImg.jpeg",
       description:
         "Search any cities weather. Displays temperature, weather condition, and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
@@ -36,7 +33,7 @@ function Projects() {
     },
     {
       title: "Chatify",
-      image: imgFood,
+      image: "/assets/chatifyImg.jpeg",
       description:
         "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
       tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
@@ -50,7 +47,7 @@ function Projects() {
     },
     {
       title: "Food Explorer",
-      image: imgWeather,
+      image: "/assets/foodImg.jpeg",
       description:
         "A recipe search app where users can find meal ideas with images. This was one of my first projects where I learned to work with APIs.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
