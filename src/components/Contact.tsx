@@ -1,35 +1,34 @@
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, OctagonAlert } from "lucide-react";
+import { useForm } from "react-hook-form";
 
 function Contact() {
   const email = "ranaa_safi@hotmail.com";
   const form = useRef<HTMLFormElement>(null);
   const [message, setMessage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({ mode: "onTouched" });
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const sendEmail = async (data: any) => {
+    if (!form.current) return;
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          "service_tv1bg08",
-          "template_bnfm7ve",
-          form.current,
-          "Dxftnm7vZ75Rvo-KA"
-        )
-        .then(
-          (result: any) => {
-            console.log(result.text);
-            setMessage("Message sent succesfully!");
-          },
-          (error: any) => {
-            console.log(error.text);
-            setMessage("Error sending message, please try again.");
-          }
-        );
-
-      (e.target as HTMLFormElement).reset();
+    try {
+      await emailjs.sendForm(
+        "service_tv1bg08",
+        "template_bnfm7ve",
+        form.current,
+        "Dxftnm7vZ75Rvo-KA"
+      );
+      setMessage("Message sent successfully!");
+      reset(); // reset form fields
+    } catch (error) {
+      console.error(error);
+      setMessage("Error sending message, please try again.");
     }
   };
 
@@ -99,7 +98,7 @@ function Contact() {
 
             <form
               ref={form}
-              onSubmit={sendEmail}
+              onSubmit={handleSubmit(sendEmail)}
               className="flex flex-col gap-2"
             >
               <div className="flex xs:flex-col xl:flex-row gap-2 mb-2">
@@ -107,32 +106,77 @@ function Contact() {
                   <h4 className="mb-2 font-semibold">Email:</h4>
                   <input
                     type="email"
-                    name="user_email"
-                    placeholder="Your@email address"
-                    required
+                    placeholder="your@email adress"
+                    {...register("user_email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i,
+                        message: "Enter a valid email address",
+                      },
+                    })}
                     className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   />
+
+                  {errors.user_email?.message &&
+                    typeof errors.user_email.message === "string" && (
+                      <p className="text-red-500 text-sm mt-1 flex flex-row items-center gap-1">
+                        <OctagonAlert className="w-4 h-4 text-red-500" />
+                        {errors.user_email.message}
+                      </p>
+                    )}
                 </div>
 
                 <div className="flex flex-col w-full mb-4">
                   <h4 className="mb-2 font-semibold">Subject:</h4>
                   <input
-                    type="Subject"
-                    name="user_email"
-                    placeholder="Your message subject..."
-                    required
+                    type="text"
+                    placeholder="Type your subject here..."
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                     className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                   />
+
+                  {errors.subject?.message &&
+                    typeof errors.subject.message === "string" && (
+                      <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
+                        <OctagonAlert className="w-4 h-4 text-red-500" />
+
+                        {errors.subject.message}
+                      </p>
+                    )}
                 </div>
               </div>
+
               <h4 className="mb-0 font-semibold">Message:</h4>
               <textarea
-                name="message"
                 rows={6}
-                placeholder="Type your message here..."
-                required
+                placeholder="Type you message here..."
+                {...register("message", {
+                  required: "Enter your message",
+                  minLength: {
+                    value: 10,
+                    message: "Provide a more detailed message",
+                  },
+                  maxLength: {
+                    value: 1000,
+                    message: "Please keep your message under 1000 characters",
+                  },
+                })}
                 className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              ></textarea>
+              />
+
+              {errors.message?.message &&
+                typeof errors.message.message === "string" && (
+                  <p className="text-red-500 text-sm mt-1 flex flex-row gap-1">
+                    <OctagonAlert className="w-4 h-4 text-red-500" />
+
+                    {errors.message.message}
+                  </p>
+                )}
+              <p className="text-end text-sm text-blue-400">
+                Max 1000 characters
+              </p>
 
               <input
                 type="submit"
