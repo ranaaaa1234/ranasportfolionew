@@ -8,6 +8,7 @@ function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [message, setMessage] = useState("");
   const [messageText, setMessageText] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
@@ -18,6 +19,8 @@ function Contact() {
 
   const sendEmail = async () => {
     if (!form.current) return;
+
+    setIsLoading(true);
 
     try {
       await emailjs.sendForm(
@@ -31,6 +34,8 @@ function Contact() {
     } catch (error) {
       console.error(error);
       setMessage("Error sending message, please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -88,17 +93,16 @@ function Contact() {
 
         <div className="flex justify-center items-center px-4">
           <section className="w-full max-w-xl justify-center bg-white p-8 rounded-lg shadow-md border border-blue-100">
-
-            <div className="flex flex-row gap-3"> 
-            <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
-              Send me a message:
-            </h4>
-            {message && (
-              <p className="text-sm text-green-600 flex flex-row gap-1 items-center">
-                <MailCheck className="w-4 h-4" />
-                {message}
-              </p>
-            )}
+            <div className="flex flex-row gap-3">
+              <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
+                Send me a message:
+              </h4>
+              {message && (
+                <p className="text-sm text-green-600 flex flex-row gap-1 items-center">
+                  <MailCheck className="w-4 h-4" />
+                  {message}
+                </p>
+              )}
             </div>
             <p className="mb-5 text-blue-400 text-md">
               Leave me a message and I’ll get back to you as soon as I can!
@@ -188,11 +192,20 @@ function Contact() {
                     {errors.message.message}
                   </p>
                 )}
-              <input
+              <button
                 type="submit"
-                value="Send Message"
-                className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer mt-5"
-              />
+                disabled={isLoading}
+                className={`flex items-center justify-center gap-2 px-6 py-2 rounded-lg transition-opacity ${
+                  isLoading
+                    ? "bg-blue-900 text-white opacity-90 cursor-not-allowed"
+                    : "bg-blue-900 text-white hover:opacity-90"
+                }`}
+              >
+                {isLoading && (
+                  <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                )}
+                {isLoading ? "Sending..." : "Send message"}
+              </button>
             </form>
           </section>
         </div>
