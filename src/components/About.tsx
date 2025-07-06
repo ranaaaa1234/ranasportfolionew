@@ -20,7 +20,7 @@ function About() {
 
         <p className="xs:text-md md:text-xl lg:text-md xl:text-xl mt-5 text-blue-900">
           I enjoy turning ideas into interactive, accessible, and visually
-          appealing websites. My strengths lie not just in writing
+          appealing websites. My strengths are not just in writing
           well-structured code but also in thinking like a user, making sure
           every detail feels intuitive and purposeful. I'm a fast learner,
           highly motivated and thrive when collaborating with others or diving

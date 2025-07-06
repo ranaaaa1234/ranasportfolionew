@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin, OctagonAlert } from "lucide-react";
+import { Mail, Github, Linkedin, OctagonAlert, MailCheck } from "lucide-react";
 import { useForm } from "react-hook-form";
 
 function Contact() {
@@ -88,16 +88,21 @@ function Contact() {
 
         <div className="flex justify-center items-center px-4">
           <section className="w-full max-w-xl justify-center bg-white p-8 rounded-lg shadow-md border border-blue-100">
+
+            <div className="flex flex-row gap-3"> 
             <h4 className="text-blue-900 xs:text-lg sm:text-xl font-semibold">
               Send me a message:
             </h4>
+            {message && (
+              <p className="text-sm text-green-600 flex flex-row gap-1 items-center">
+                <MailCheck className="w-4 h-4" />
+                {message}
+              </p>
+            )}
+            </div>
             <p className="mb-5 text-blue-400 text-md">
               Leave me a message and I’ll get back to you as soon as I can!
             </p>
-            {message && (
-              <p className="mb-4 text-sm text-green-600">{message}</p>
-            )}
-
             <form
               ref={form}
               onSubmit={handleSubmit(sendEmail)}
@@ -105,7 +110,7 @@ function Contact() {
             >
               <div className="flex xs:flex-col xl:flex-row gap-2 mb-2">
                 <div className="flex flex-col w-full mb-4">
-                  <h4 className="mb-2 font-semibold">Email:</h4>
+                  <h4 className="mb-2 font-semibold text-blue-900">Email:</h4>
                   <input
                     type="email"
                     placeholder="your@email.domain"
@@ -129,7 +134,7 @@ function Contact() {
                 </div>
 
                 <div className="flex flex-col w-full mb-4">
-                  <h4 className="mb-2 font-semibold">Subject:</h4>
+                  <h4 className="mb-2 font-semibold text-blue-900">Subject:</h4>
                   <input
                     type="text"
                     placeholder="Type your subject here..."
@@ -150,7 +155,7 @@ function Contact() {
                 </div>
               </div>
 
-              <h4 className="mb-0 font-semibold">Message:</h4>
+              <h4 className="mb-0 font-semibold text-blue-900">Message:</h4>
               <textarea
                 rows={6}
                 placeholder="Type you message here..."
@@ -169,7 +174,7 @@ function Contact() {
                 onChange={(e) => setMessageText(e.target.value)}
                 className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-                            <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between">
                 <p className=" text-sm text-blue-400">Max 1000 characters</p>
 
                 <div className="text-xs text-blue-400">
@@ -186,7 +191,7 @@ function Contact() {
               <input
                 type="submit"
                 value="Send Message"
-                className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer"
+                className="bg-blue-900 text-white px-6 py-2 rounded-lg hover:opacity-90 cursor-pointer mt-5"
               />
             </form>
           </section>
