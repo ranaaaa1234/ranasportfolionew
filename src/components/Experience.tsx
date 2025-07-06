@@ -1,4 +1,4 @@
-import { CalendarHeart, Users } from "lucide-react";
+import { CalendarHeart, Users, ExternalLink } from "lucide-react";
 import Tooltip from "./Tooltip";
 
 function Experience() {
@@ -131,8 +131,10 @@ function Experience() {
                       href={project.project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
+                      className="flex flex-row gap-1 items-center bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
                     >
+                      {" "}
+                      <ExternalLink className="w-4 h-4" />
                       Live demo
                     </a>
                   </div>
