@@ -1,11 +1,17 @@
 import { CalendarHeart, Users, Github, ExternalLink, Ban } from "lucide-react";
 import Tooltip from "./Tooltip";
+import imgPortfolio from "../assets/portfolio.jpeg";
+import imgChatify from "../assets/chatifyImg.jpeg";
+import imgFood from "../assets/foodImg.jpeg";
+import imgWeather from "../assets/weatherAppImg.jpeg";
+
+
 
 function Projects() {
   const projectList = [
     {
       title: "Portfolio",
-      image: "/public/assets/portfolio.jpeg",
+      image: imgPortfolio,
       description:
         "A personal portfolio website showcasing my skills and projects.",
       tech: ["React", "TypeScript", "TailwindCSS", "Vercel"],
@@ -19,7 +25,7 @@ function Projects() {
     },
     {
       title: "Weather Web-App",
-      image: "/public/assets/weatherAppImg.jpeg",
+      image: imgChatify,
       description:
         "Search any cities weather. Displays temperature, weather condition, and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
@@ -33,7 +39,7 @@ function Projects() {
     },
     {
       title: "Chatify",
-      image: "/public/assets/chatifyImg.jpeg",
+      image: imgFood,
       description:
         "A real-time chat platform with user registration and login functionality. This was my first fullstack project, where I learned to work with MongoDB and REST-APIs.",
       tech: ["React", "JavaScript", "CSS", "MongoDB", "REST-API", "Netlify"],
@@ -47,7 +53,7 @@ function Projects() {
     },
     {
       title: "Food Explorer",
-      image: "/public/assets/foodImg.jpeg",
+      image: imgWeather,
       description:
         "A recipe search app where users can find meal ideas with images. This was one of my first projects where I learned to work with APIs.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
@@ -132,26 +138,24 @@ function Projects() {
                   </Tooltip>
 
                   {project.live ? (
-                    <Tooltip text="View website"> 
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-row gap-1 items-center bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live demo
-                    </a>
+                    <Tooltip text="View website">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row gap-1 items-center bg-blue-900 text-white px-4 py-2 rounded-lg hover:opacity-90 text-sm"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live demo
+                      </a>
                     </Tooltip>
                   ) : (
                     <Tooltip text="Website unavailable">
-                    <span className="flex flex-row gap-1 items-center bg-gray-300 text-gray-500 px-3 py-2 rounded-lg text-sm">
-                      <Ban className="w-4 h-4"></Ban>
-                                            Unavailable
-
-                    </span>
-                     </Tooltip>
-
+                      <span className="flex flex-row gap-1 items-center bg-gray-300 text-gray-500 px-3 py-2 rounded-lg text-sm">
+                        <Ban className="w-4 h-4"></Ban>
+                        Unavailable
+                      </span>
+                    </Tooltip>
                   )}
                 </div>
               </div>
