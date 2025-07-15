@@ -91,7 +91,7 @@ function Skills() {
         </div>
 
         {/* UX & UI */}
-        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-200 flex flex-col justify-start">
+        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-100 flex flex-col justify-start">
           <h3 className="text-xl font-semibold text-blue-800 mb-4">
             UX & UI Design
           </h3>

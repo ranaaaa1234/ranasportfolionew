@@ -162,7 +162,7 @@ function Contact() {
               <h4 className="mb-0 font-semibold text-blue-900">Message:</h4>
               <textarea
                 rows={6}
-                placeholder="Type you message here..."
+                placeholder="Type your message here..."
                 {...register("message", {
                   required: "Enter your message",
                   minLength: {
