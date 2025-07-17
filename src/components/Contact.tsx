@@ -49,7 +49,7 @@ function Contact() {
           Let's connect
         </h2>
         <p className="text-blue-700 xs:text-md sm:text-lg max-w-2xl">
-          Open to new ideas, projects, and collaborations.
+          Open to new ideas, projects and collaborations.
         </p>
       </div>
 
