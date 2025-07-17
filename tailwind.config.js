@@ -27,7 +27,7 @@ export default {
         },
       },
       screens: {
-      xs: '390px', // My phone, Iphone 14
+      xs: '360px',
       sm: '640px',     
       md: '768px',     
       lg: '1024px',   
