@@ -66,7 +66,7 @@ function Experience() {
       className="flex flex-col items-center justify-center bg-white py-16 px-4"
     >
       <h2 className="xs:text-3xl sm:text-4xl font-light text-blue-900 mb-4">
-        Experience
+        Work experience
       </h2>
       <p className="xs:text-md sm:text-lg text-blue-800 mb-10 text-center max-w-xl">
         These are real projects I’ve built and contributed to.

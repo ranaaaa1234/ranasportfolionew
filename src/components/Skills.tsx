@@ -8,6 +8,9 @@ import {
   Search,
   Figma,
   Network,
+  Hexagon,
+  BookOpen,
+  Box,
 } from "lucide-react";
 
 function Skills() {
@@ -57,25 +60,40 @@ function Skills() {
     },
   ];
 
+  const backendSkills = [
+    {
+      name: "Swagger / API docs",
+      icon: <BookOpen className="w-5 h-5 text-blue-700" />,
+    },
+    {
+      name: "Node.js",
+      icon: <Hexagon className="w-5 h-5 text-blue-700" />,
+    },
+    {
+      name: "Docker",
+      icon: <Box className="w-5 h-5 text-blue-700" />,
+    },
+  ];
+
   return (
     <section
       id="skills"
       className="flex flex-col items-center justify-center bg-blue-50 py-16"
     >
       <h2 className="xs:text-3xl sm:text-4xl xs:text-center font-light text-blue-900 mb-5">
-        My skills in frontend and design
+        My experience in frontend and design
       </h2>
       <p className="text-blue-700 xs:text-md sm:text-lg text-center xs:max-w-md sm:max-w-3xl mb-20">
         A selection of the tools and techniques I use in frontend development
-        and UX/UI design. I'm always eager to grow, learn, and expand my
+        and UX/UI design. I'm always eager to grow, learn and expand my
         skillset.
       </p>
 
-      <div className="flex flex-col md:flex-row xs:gap-10 md:gap-20 justify-center items-center">
+      <div className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xs:gap-10 md:gap-20 justify-center items-center">
         {/* Frontend */}
-        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-100 flex flex-col justify-start">
+        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] h-[340px] text-left border border-blue-100 flex flex-col justify-start">
           <h3 className="text-xl font-semibold text-blue-800 mb-4">Frontend</h3>
-          <ul className="text-blue-700 space-y-2">
+          <ul className="text-blue-700 space-y-3">
             {frontendSkills.map((item) => (
               <li
                 key={item.name}
@@ -91,12 +109,30 @@ function Skills() {
         </div>
 
         {/* UX & UI */}
-        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] text-left border border-blue-100 flex flex-col justify-start">
+        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] h-[340px] text-left border border-blue-100 flex flex-col justify-start">
           <h3 className="text-xl font-semibold text-blue-800 mb-4">
             UX & UI Design
           </h3>
-          <ul className="text-blue-700 space-y-2">
+          <ul className="text-blue-700 space-y-3">
             {uxSkills.map((item) => (
+              <li
+                key={item.name}
+                className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm hover:opacity-70"
+              >
+                {item.icon}
+                <span className="text-blue-900 font-light text-lg">
+                  {item.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Backend */}
+        <div className="bg-white p-8 rounded-lg shadow-md w-[320px] h-[340px] text-left border border-blue-100 flex flex-col justify-start">
+          <h3 className="text-xl font-semibold text-blue-800 mb-4">Backend</h3>
+          <ul className="text-blue-700 space-y-3">
+            {backendSkills.map((item) => (
               <li
                 key={item.name}
                 className="flex items-center gap-2 bg-blue-50 rounded-lg p-1 shadow-sm hover:opacity-70"
