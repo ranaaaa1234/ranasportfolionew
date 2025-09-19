@@ -179,7 +179,7 @@ function Contact() {
                 className="border border-blue-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
               <div className="flex flex-row justify-between">
-                <p className=" text-sm text-blue-400">Max 1000 characters</p>
+                <p className=" text-sm text-blue-400">Max 1000 words</p>
 
                 <div className="text-xs text-blue-400">
                   {messageText.length} / 1000
