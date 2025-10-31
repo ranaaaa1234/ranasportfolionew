@@ -4,6 +4,20 @@ import Tooltip from "./Tooltip";
 function Projects() {
   const projectList = [
     {
+      title: "Curly Gurl",
+      image: "/images/curlyGurl.jpeg",
+      description:
+        "Curly Gurl is a e-commerce website built to explore and practice fullstack development. The project includes features like user authentication, favorites, shopping cart and checkout process.",
+      tech: ["React", "TypeScript", "TailwindCSS", "Vercel", "Render", "PostgreSQL", "Next.js", ],
+      timeline: "5 months",
+      collab: "Solo project",
+      live: "https://curlygurl.vercel.app/",
+      code: "https://github.com/ranaaaa1234/curlygurl-frontend",
+
+      timelineIcon: <CalendarHeart className="w-4 h-4 text-blue-900" />,
+      collabIcon: <Users className="w-4 h-4 text-blue-900" />,
+    },
+    {
       title: "Portfolio",
       image: "/images/portfolio.jpeg",
       description:
@@ -21,7 +35,7 @@ function Projects() {
       title: "Weather Web-App",
       image: "/images/weatherAppImg.jpeg",
       description:
-        "Search any cities weather. Displays temperature, weather condition, and time.",
+        "Search any cities weather. Displays temperature, weather condition and time.",
       tech: ["React", "JavaScript", "CSS", "REST-API", "Netlify"],
       timeline: "1 week",
       collab: "Solo project",
@@ -130,7 +144,6 @@ function Projects() {
                       Code
                     </a>
                   </Tooltip>
-
                   {project.live ? (
                     <Tooltip text="View website">
                       <a
