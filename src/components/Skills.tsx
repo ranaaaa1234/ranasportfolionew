@@ -11,6 +11,8 @@ import {
   Hexagon,
   BookOpen,
   Box,
+  Boxes,
+  PanelsLeftRight,
 } from "lucide-react";
 
 function Skills() {
@@ -72,6 +74,14 @@ function Skills() {
     {
       name: "Docker",
       icon: <Box className="w-5 h-5 text-blue-700" />,
+    },
+    {
+      name: "PostgreSQL",
+      icon: <Boxes className="w-5 h-5 text-blue-700" />,
+    },
+    {
+      name: "Next.js",
+      icon: <PanelsLeftRight className="w-5 h-5 text-blue-700" />,
     },
   ];
 
