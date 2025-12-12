@@ -84,7 +84,7 @@ function Experience() {
                   {project.role}
                 </h3>
                 <a
-                  href="https://www.mappi.ai/"
+                  href="https://arbetsformedlingen.se/for-arbetsgivare/anstallningsstod/anmal-ditt-intresse/intro"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-blue-500 mb-2 hover:opacity-80 hover:underline"
